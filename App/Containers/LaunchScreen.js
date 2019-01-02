@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, Button } from 'react-native'
 import { Images } from '../Themes'
 
 // Styles
@@ -9,7 +9,6 @@ export default class LaunchScreen extends Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <View style={styles.section} >
             <Text style={styles.sectionText}>
@@ -18,8 +17,11 @@ export default class LaunchScreen extends Component {
             <Text style={styles.sectionText}>
               Type II Diabetes App
             </Text>
+            <Button
+              title="Get Started"
+              onPress={() => this.props.navigation.navigate('AvatarScreen')}
+            />
           </View>
-
         </ScrollView>
       </View>
     )
