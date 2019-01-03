@@ -20,56 +20,97 @@ const ApplicationStyles = {
     },
     container: {
       flex: 1,
-      paddingTop: Metrics.baseMargin,
+      paddingVertical: Metrics.spacingUnit,
       backgroundColor: Colors.background
     },
     section: {
-      margin: Metrics.section,
-      padding: Metrics.baseMargin
+      paddingVertical: Metrics.spacingUnit * 2,
+      paddingHorizontal: Metrics.spacingUnit * 2
     },
     sectionText: {
-      ...Fonts.style.normal,
-      paddingVertical: Metrics.doubleBaseMargin,
-      color: Colors.snow,
-      marginVertical: Metrics.smallMargin,
-      textAlign: 'center'
+      ...Fonts.style.h4,
+      color: Colors.white,
+    },
+    sectionTitle: {
+      ...Fonts.style.h2,
+      color: Colors.text,
     },
     subtitle: {
-      color: Colors.snow,
-      padding: Metrics.smallMargin,
-      marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin
-    },
-    titleText: {
       ...Fonts.style.h2,
-      fontSize: 14,
-      color: Colors.text
+      color: Colors.text,
+      textTransform: 'uppercase'
+    },
+    title: {
+      ...Fonts.style.h1,
+      fontSize: 48,
+      color: Colors.text,
+      textTransform: 'uppercase'
+    },
+    button: {
+      backgroundColor: Colors.white,
+      color: Colors.backgroundColor,
+      textAlign: 'center',
+      padding: Metrics.spacingUnit * 0.5,
+      marginVertical: Metrics.spacingUnit 
+    },
+    buttonText: {
+      textAlign: 'center',
+      ...Fonts.style.h4,
+    },
+    sectionTitle: {
+      ...Fonts.style.h3,
+      color: Colors.white,
+      padding: Metrics.smallMargin,
+      marginTop: Metrics.smallMargin,
+      marginHorizontal: Metrics.spacingUnit,
+      alignItems: 'center',
+      textAlign: 'center'
+    },
+    darkLabel: {
+      color: Colors.coal,
+    },
+    pinkLabel: {
+      color: Colors.pink,
+    },
+    blueLabel: {
+      color: Colors.blue,
+    },
+    lightBlueBackground: {
+      backgroundColor: Colors.lightBlue
+    },
+    pinkBackground: {
+      backgroundColor: Colors.pink,
+    },
+    groupContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      flex: 1
+    },
+    groupItem: {
+      flex: 1,
+      marginHorizontal: Metrics.spacingUnit * 0.5,
     }
   },
   darkLabelContainer: {
     padding: Metrics.smallMargin,
-    paddingBottom: Metrics.doubleBaseMargin,
+    paddingBottom: Metrics.spacingUnit * 2,
     borderBottomColor: Colors.border,
     borderBottomWidth: 1,
-    marginBottom: Metrics.baseMargin
+    marginBottom: Metrics.spacingUnit
   },
   darkLabel: {
     fontFamily: Fonts.type.bold,
     color: Colors.snow
   },
-  groupContainer: {
-    margin: Metrics.smallMargin,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-  },
+  
   sectionTitle: {
     ...Fonts.style.h4,
     color: Colors.coal,
     backgroundColor: Colors.ricePaper,
     padding: Metrics.smallMargin,
     marginTop: Metrics.smallMargin,
-    marginHorizontal: Metrics.baseMargin,
+    marginHorizontal: Metrics.spacingUnit,
     borderWidth: 1,
     borderColor: Colors.ember,
     alignItems: 'center',

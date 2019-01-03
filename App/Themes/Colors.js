@@ -1,5 +1,6 @@
 const colors = {
   background: '#15203E',
+  white: '#fff',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',
@@ -21,7 +22,11 @@ const colors = {
   eggplant: '#15203E',
   border: '#483F53',
   banner: '#5F3E63',
-  text: '#E0D7E5'
+  text: '#fff',
+  pink: '#F0A792',
+  gray: '#ddd',
+  lightBlue: '#8BB3FB',
+  blue: '#216EF8',
 }
 
 export default colors

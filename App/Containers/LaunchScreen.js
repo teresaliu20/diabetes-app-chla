@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View, Button } from 'react-native'
+import { ScrollView, Text, Image, View, TouchableOpacity } from 'react-native'
 import { Images } from '../Themes'
 
 // Styles
@@ -11,16 +11,28 @@ export default class LaunchScreen extends Component {
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
           <View style={styles.section} >
-            <Text style={styles.sectionText}>
+            <Text style={styles.title}>
               CHLA
             </Text>
-            <Text style={styles.sectionText}>
-              Type II Diabetes App
+            <Text style={styles.subtitle}>
+              Type II Diabetes Game
             </Text>
-            <Button
-              title="Get Started"
-              onPress={() => this.props.navigation.navigate('AvatarScreen')}
-            />
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('UserProfileScreen')}>
+              <Text
+                style={styles.buttonText}>
+                Get Started
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('AvatarScreen')}>
+              <Text
+                style={styles.buttonText}>
+                Choose Avatar
+              </Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Text, KeyboardAvoidingView, Button } from 'react-native'
+import { View, ScrollView, Text, KeyboardAvoidingView, Button, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
@@ -12,15 +12,20 @@ class AvatarScreen extends Component {
     return (
       <View style={styles.mainContainer}>
         <ScrollView style={styles.container}>
-          <KeyboardAvoidingView behavior='position'>
-            <Text style={styles.sectionText}>
+          <View
+            style={styles.section}>
+            <Text style={styles.sectionTitle}>
               Choose An Avatar
             </Text>
-            <Button
-              title="Back"
-              onPress={() => this.props.navigation.navigate('LaunchScreen')}
-            />
-          </KeyboardAvoidingView>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate('LaunchScreen')}>
+              <Text
+                style={styles.buttonText}>
+                Go Back
+              </Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
       </View>
     )

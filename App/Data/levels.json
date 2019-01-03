@@ -1,0 +1,21 @@
+{
+	"one": {
+		"name": "Level 1",
+		"description": "Insert some description about Level 1",
+		"topics": "Type I and Type II Diabetes Food Choices",
+		"challeges": [
+				{
+					"type": "video",
+					"isLocked": false,
+					"link": "insert link here"
+				},
+				{
+					"type": "question",
+					"isLocked": true,
+					"question": "Insert question here",
+					"choices": ["Choice A", "Choice B", "Choice C"],
+					"correctChoice": "Choice A"
+				}
+		]
+	},
+}
