@@ -75,8 +75,17 @@ const ApplicationStyles = {
     blueLabel: {
       color: Colors.blue,
     },
+    whiteBackground: {
+      backgroundColor: Colors.white
+    },
     lightBlueBackground: {
       backgroundColor: Colors.lightBlue
+    },
+    blueBackground: {
+      backgroundColor: Colors.blue
+    },
+    darkBackground: {
+      backgroundColor: Colors.coal
     },
     pinkBackground: {
       backgroundColor: Colors.pink,
@@ -90,6 +99,21 @@ const ApplicationStyles = {
     groupItem: {
       flex: 1,
       marginHorizontal: Metrics.spacingUnit * 0.5,
+    },
+    circleButton: {
+      alignItems:'center',
+      justifyContent:'center',
+      width:90,
+      height:90,
+      backgroundColor: Colors.blue,
+      borderRadius:90,
+      margin: Metrics.spacingUnit * 1
+    },
+    circleButtonWrapper: {
+      paddingHorizontal: Metrics.spacingUnit * 4,
+      flexDirection: 'row',
+      alignItems: 'center',
+      flex: 1
     }
   },
   darkLabelContainer: {

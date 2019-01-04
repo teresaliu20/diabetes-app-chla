@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, View, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
-import levelsData from '../Data/levels.json';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
 // Styles
-import styles from './Styles/MapLevelsScreenStyle'
+import styles from './Styles/VideoScreenStyle'
 
-class MapLevelsScreen extends Component {
+class VideoScreen extends Component {
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -16,19 +15,16 @@ class MapLevelsScreen extends Component {
           <View
             style={styles.section}>
             <Text style={styles.sectionTitle}>
-              Map Of Levels
+              Video Screen
             </Text>
-            {
-              levelsData.map(level => (
-                <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => this.props.navigation.navigate('LevelScreen', { level: level })}>
-                  <Text
-                    style={styles.buttonText}>
-                    {level.name}
-                  </Text>
-                </TouchableOpacity>))
-            }
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.goBack()}>
+              <Text
+                style={styles.buttonText}>
+                Go Back
+              </Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
@@ -46,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapLevelsScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(VideoScreen)

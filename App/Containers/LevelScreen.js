@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, View, TouchableOpacity } from 'react-native'
+import { ScrollView, Text, View, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
+import playImage from '../Assets/play.png';
+import questionImage from '../Assets/question.png';
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -30,9 +32,41 @@ class LevelScreen extends Component {
                   { levelObj.topics }
                 </Text>
               </View>
+              {
+                levelObj.challenges.map(challenge => {
+                  if (challenge.type === "video") {
+                    return (<View
+                              style={styles.circleButtonWrapper}>
+                              <TouchableOpacity
+                                style={[styles.circleButton, styles.blueBackground]}
+                                onPress={() => this.props.navigation.navigate('VideoScreen', { "challenge": challenge })}>
+                                <Image source={playImage}/>
+                              </TouchableOpacity>
+                              <Text
+                                style={styles.sectionText}>
+                                { challenge.name }
+                              </Text>
+                            </View>)
+                  }
+                  else {
+                    return (<View
+                              style={styles.circleButtonWrapper}>
+                              <TouchableOpacity
+                                style={[styles.circleButton, styles.pinkBackground]}
+                                onPress={() => this.props.navigation.navigate('QuestionScreen', { "challenge": challenge })}>
+                                <Image source={questionImage}/>
+                              </TouchableOpacity>
+                              <Text
+                                style={styles.sectionText}>
+                                { challenge.name }
+                              </Text>
+                            </View>)
+                  }
+                })
+              }
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.props.navigation.navigate('LaunchScreen')}>
+                onPress={() => this.props.navigation.goBack()}>
                 <Text
                   style={styles.buttonText}>
                   Go Back
@@ -47,7 +81,7 @@ class LevelScreen extends Component {
               </Text>
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.props.navigation.navigate('LaunchScreen')}>
+                onPress={() => this.props.navigation.goBack()}>
                 <Text
                   style={styles.buttonText}>
                   Go Back

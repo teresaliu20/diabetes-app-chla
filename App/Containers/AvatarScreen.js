@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import styles from './Styles/AvatarScreenStyle'
 
 class AvatarScreen extends Component {
+
   render () {
     return (
       <View style={styles.mainContainer}>
